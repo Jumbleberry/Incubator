@@ -19,14 +19,14 @@
 
 namespace Phalcon\Validation\Validator\Db;
 
-use Phalcon\Validation\Validator;
-use Phalcon\Validation\Message;
-use Phalcon\Db\Adapter\Pdo as DbConnection;
-use Phalcon\Validation\Exception as ValidationException;
-use Phalcon\DiInterface;
-use Phalcon\Di;
 use Phalcon\Db;
+use Phalcon\Db\Adapter\Pdo as DbConnection;
+use Phalcon\Di;
+use Phalcon\DiInterface;
 use Phalcon\Validation;
+use Phalcon\Validation\Exception as ValidationException;
+use Phalcon\Validation\Message;
+use Phalcon\Validation\Validator;
 
 /**
  * Phalcon\Validation\Validator\Db\Uniqueness
@@ -127,7 +127,7 @@ class Uniqueness extends Validator
      * @param  string $attribute
      * @return boolean
      */
-    public function validate(Validation $validator, $attribute)
+    public function validate(Validation $validator, string $attribute) : bool
     {
         $table = $this->db->escapeIdentifier(
             $this->getOption('table')
