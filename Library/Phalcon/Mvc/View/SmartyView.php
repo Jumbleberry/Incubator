@@ -11,7 +11,7 @@ class SmartyView extends View
         parent::__construct();
     }
 
-    public function setVar($key, $value, $nocache = false)
+    public function setVar($key, $value, $nocache = false) : View
     {
         $this->_viewParams[$key] = $value;
         $this->_viewParams["_" . $key] = $nocache;

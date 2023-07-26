@@ -428,7 +428,7 @@ class Mongo extends Adapter
      *
      * @return int
      */
-    public function getNoArgumentsDefaultAction()
+    public function getNoArgumentsDefaultAction() : int
     {
         return $this->noArgumentsDefaultAction;
     }

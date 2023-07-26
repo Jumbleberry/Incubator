@@ -104,7 +104,7 @@ class Mysql extends \Phalcon\Db\Adapter\Pdo\Mysql
      * @param  array   $bindTypes
      * @return boolean
      */
-    public function execute($sqlStatement, $bindParams = null, $bindTypes = null)
+    public function execute($sqlStatement, $bindParams = null, $bindTypes = null) : bool
     {
         $this->internalConnect();
 

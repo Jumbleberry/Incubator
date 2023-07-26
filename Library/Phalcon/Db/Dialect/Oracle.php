@@ -71,7 +71,7 @@ class Oracle extends Dialect
      * @param mixed $number
      * @return string
      */
-    public function limit($sqlQuery, $number)
+    public function limit($sqlQuery, $number) : string
     {
         $offset = 0;
 

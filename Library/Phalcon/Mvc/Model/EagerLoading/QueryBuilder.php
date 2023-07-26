@@ -6,7 +6,7 @@ final class QueryBuilder extends Builder
 {
     const E_NOT_ALLOWED_METHOD_CALL = 'When eager loading relations queries must return full entities';
     
-    public function distinct($distinct)
+    public function distinct($distinct) : Builder
     {
         throw new \LogicException(
             static::E_NOT_ALLOWED_METHOD_CALL

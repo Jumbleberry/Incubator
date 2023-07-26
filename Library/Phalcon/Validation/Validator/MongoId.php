@@ -37,7 +37,7 @@ class MongoId extends Validator
      * @param string $attribute
      * @return bool
      */
-    public function validate(Validation $validation, $attribute)
+    public function validate(Validation $validation, string $attribute) : bool
     {
         $value = $validation->getValue($attribute);
         $allowEmpty = $this->hasOption('allowEmpty');

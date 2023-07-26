@@ -53,7 +53,7 @@ class CardNumber extends Validator
      * @return bool
      * @throws Exception
      */
-    public function validate(Validation $validation, $attribute)
+    public function validate(Validation $validation, string $attribute) : bool
     {
         $value = preg_replace(
             '/[^\d]/',

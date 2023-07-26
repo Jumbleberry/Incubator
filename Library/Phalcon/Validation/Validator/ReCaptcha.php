@@ -84,7 +84,7 @@ class ReCaptcha extends Validator
      *
      * @return bool
      */
-    public function validate(Validation $validation, $attribute)
+    public function validate(Validation $validation, string $attribute) : bool
     {
         $secret   = $this->getOption('secret');
         $value    = $validation->getValue($attribute);
